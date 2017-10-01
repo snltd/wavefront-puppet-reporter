@@ -1,0 +1,11 @@
+{
+  "name": "snltd-wavefront_reporter",
+  "version": "1.0.0",
+  "author": "snltd",
+  "summary": "A Puppet report processor for reports to Wavefront",
+  "license": "BSD-2 Clause"
+  "source": "https://github.com/snltd/wavefront-puppet-reporter",
+  "issues_url": "https://github.com/snltd/wavefront-puppet-reporter/issues",
+  "project_page": "https://github.com/snltd/wavefront-puppet-reporter"
+  "dependencies": []
+}
