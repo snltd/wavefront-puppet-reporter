@@ -77,7 +77,11 @@ end
 #
 def init_pid
   if RbConfig::CONFIG['arch'] =~ /solaris/
-    `/bin/pgrep -fx /sbin/init`.to_i
+    if `zoneadm list -c | grep ^global$`.empty?
+      `/bin/pgrep -fx zsched`.to_i
+    else
+      `/bin/pgrep -fx /sbin/init`.to_i
+    end
   else
     1
   end
