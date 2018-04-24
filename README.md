@@ -41,7 +41,7 @@ reports=wavefront
   Default: `[:run_by, :status]`
 
 The following point tags can be enabled by including them in the
-`wf_rerpot_tags` array:
+`wf_report_tags` array:
 
 * `run_by`: what triggered the run. Could be `cron`,
   `bootstrap`, or `interactive`.
@@ -55,6 +55,8 @@ The following point tags can be enabled by including them in the
 * `environment`: the Puppet environment which was used.
 * `run_no`: how many times Puppet (specifically the reporter)
   has run on this host
+
+You can turn any other fact into a tag by adding it to the array.
 
 5. Ensure, probably via Puppet itself, that a directory
 `/etc/puppet/report/wavefront` exists and is writable.
